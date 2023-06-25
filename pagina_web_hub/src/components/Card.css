@@ -1,0 +1,58 @@
+
+
+ /* Para dispositivos móviles y tablets */
+@media (max-width: 767px) {
+  .card-deck .card {
+    margin-bottom: 1.5rem;
+  }
+  .card-deck {
+    display: block;
+  }
+}
+
+/* Para laptops y pantallas más grandes       codido del package.json    "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }, */
+@media (min-width: 768px) {
+  .card-deck .card {
+    margin-bottom: 0;
+  }
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Para todas las pantallas */
+.card {
+  width: 100%;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card.boop {
+  position: relative;
+}
+
+.card.boop::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f6b93b;
+  box-sizing: border-box;
+  z-index: -1;
+  transform-origin: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.card.boop:hover::before {
+  opacity: 1;
+}

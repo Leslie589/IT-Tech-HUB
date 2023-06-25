@@ -1,0 +1,57 @@
+/*   Seccion Registro de Proyectos  */
+/* Estilos específicos para laptops pequeñas*/
+@media (max-width: 1366px) {
+    /* Estilos específicos para laptops pequeñas */
+    .container-registro {
+        width: 50%;
+        margin: 0 auto; 
+      }
+     
+  }
+  
+  
+  
+  @media (min-width: 1367px) and (max-width: 1600px) {
+    /* Estilos específicos para laptops medianas */
+    .container-registro {
+        width: 55%;
+        margin: 0 auto;
+      }
+    
+  }
+  
+  
+  @media (min-width: 1601px) {
+    /* Estilos específicos para laptops grandes */
+    .container-registro {
+        width: 65%;
+        margin: 0 auto; 
+      }
+     
+  }
+  
+  @media (max-width: 576px) {
+    /* Estilos para pantallas pequeñas */
+    .container-registro{
+        width: 85%;
+        max-width: 100%;
+      }
+     
+  }
+  @media (min-width: 577px) and (max-width: 768px) {
+    /* Estilos para pantallas medianas */
+    .container-registro {
+        width: 70%;
+        max-width: 100%;
+      }
+    
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    /* Estilos para pantallas grandes */
+    .container-registro {
+        width: 60%;
+        max-width: 100%;
+      }
+      
+  }
+  

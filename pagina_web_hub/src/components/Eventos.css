@@ -1,0 +1,5 @@
+.imagen {
+  width: 460px; /* El tamaño deseado en píxeles */
+  height: 350px;
+  overflow: hidden;
+}

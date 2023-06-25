@@ -1,0 +1,66 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+     height: 50px;
+     width: 50px;
+     outline: color-white;
+     background-size: 100%, 100%;
+     border-radius: 50%;
+     border: 1px solid color-white;
+     background-color: black;
+    /* filter: invert(1);*/
+ }
+ 
+ 
+.carousel-control-prev-icon { 
+     
+     width: 30px;
+     height: 48px;
+ }
+.carousel-control-next-icon { 
+    /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");*/
+     width: 30px;
+     height: 48px;
+ }
+
+ .carrouseld {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px black;
+
+
+/*font-family:Georgia, 'Times New Roman', Times, serif;*/
+}
+
+
+
+ /* Estilos para pantallas medianas */
+ @media (min-width: 577px) and (max-width: 992px) {
+  .container-carrousel,
+  .carrouseld{
+    /* Estilos específicos para pantallas medianas */
+    margin-top: -67px;
+    font-size: 2rem;
+  }
+}
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 993px) {
+  .container-carrousel,
+  .carrouseld  {
+    /* Estilos específicos para pantallas grandes */
+    margin-top: -67px;
+    font-size: 3rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+  .container-carrousel  ,
+  .carrouseld{
+    /* Estilos específicos para pantallas pequeñas */
+    margin-top: -67px;
+    font-size: 17px;
+  }
+}

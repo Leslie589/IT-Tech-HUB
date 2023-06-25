@@ -1,0 +1,73 @@
+#boton-registro {
+  font-size: 1.2em;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: #ff8c00;
+  color: white;
+}
+
+#boton-registro:hover {
+  background-color: #ff9800;
+}
+
+@media (max-width: 1366px) {
+
+.nombre{
+
+  font-size: 25px;
+}
+
+  .col-md-8 .descripcion{
+    font-size: 22px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .col-md-8 .descripcion {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+/*en celular */
+@media (max-width: 576px) {
+  .col-md-8 .descripcion {
+    font-size: 22px;
+   text-align: left;
+  }
+  
+  #titulo {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .col-md-8 .descripcion {
+    font-size: 30px;
+  }
+}
+/*Celular*/
+@media (max-width: 576px) {
+  
+  .nombre{
+
+    font-size: 20px;
+  }
+  #titulo{
+
+    font-size: 23px;
+  }
+  .col-md-8 .descripcion {
+    font-size: 18px;
+      text-align: left;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+  
+  .col-md-8 .descripcion {
+    font-size: 17px;
+  }
+}
+

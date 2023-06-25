@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <img id="Imagenes" src="" alt="">
+    <input type="file" name="" id="fileId" 
+        onchange="Uploaded()">
+    <br><br>
+    <button onclick="display()">
+        Display String
+    </button>
+
+    <script>
+
+var base64String = "";
+function Uploaded() {
+	var file = document.querySelector(
+		'input[type=file]')['files'][0];
+	var reader = new FileReader();
+	reader.onload = function () {
+		base64String = reader.result.replace("data:", "")
+			.replace(/^.+,/, "");
+		imageBase64Stringsep = base64String;
+	}
+	reader.readAsDataURL(file);
+}
+function display() {
+    var ima= document.getElementById("fileId");
+var imas=document.getElementById("Imagenes");
+var src = "data:image/jpeg;base64,";
+    src += base64String;
+imas.src=src
+
+
+}
+
+    </script>
+</body>
+</html>

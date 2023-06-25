@@ -1,0 +1,105 @@
+create database Proyectos;
+
+Use Proyectos;
+Create table Estados
+(
+IdEstado int not null primary key auto_increment,
+Nombre varchar(50),
+FechaCreacion datetime default now() 
+);
+Create table Usuarios
+(
+IdUsuario int not null primary key AUTO_INCREMENT,
+NombreUsuario varchar(250),
+Contrasenia VARCHAR(250),
+Nombre varchar(250),
+FechaRegistro datetime default now() ,
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado)
+);
+
+create table Alumnos
+(
+NoControl int not null primary key,
+Nombre varchar(250),
+APaterno varchar(250),
+AMaterno varchar(250),
+Correo varchar(250),
+Carrera varchar(250),
+FechaRegistro datetime default now() ,
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado)
+);
+
+create table Proyecto
+(
+IdProyecto int not null primary key auto_increment,
+Nombre varchar(250),
+Descripcion text,
+FechaRegistro datetime default now() ,
+FechaFinalizacion datetime  ,
+Cupo int default 0 ,
+contador int default 0,
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado),
+IdUsuario int,
+foreign key (IdUsuario)  references Usuarios(IdUsuario)
+);
+
+create table ConexionAlumProy
+(
+Id int not null primary key auto_increment,
+IdProyecto int,
+foreign key (IdProyecto)  references Proyecto(IdProyecto),
+NoControl int,
+foreign key (NoControl)  references Alumnos(NoControl),
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado),
+FechaRegistro datetime default now() 
+);
+
+
+
+
+create table Eventos
+(
+IdEvento int not null primary key auto_increment,
+Nombre varchar(50),
+Descripcion text,
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado),
+FechaCreacion datetime default now() ,
+FechaFinalizacion datetime 
+);
+
+create table Recursos
+(
+IdRecurso int not null primary key auto_increment,
+Descripcion varchar(250),
+Ruta varchar(250),
+FechaRegistro datetime default now(),
+IdEvento int,
+foreign key (IdEvento)  references Eventos(IdEvento),
+IdProyecto int,
+foreign key (IdProyecto)  references Proyecto(IdProyecto),
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado)
+);
+
+create table HisProyec
+(
+IdHisPro int not null primary key auto_increment,
+IdProyecto int,
+foreign key (IdProyecto)  references Proyecto(IdProyecto),
+Notas varchar(250),
+FechaRegistro datetime default now(),
+IdEstado int,
+foreign key (IdEstado)  references Estados(IdEstado)
+);
+
+insert into estados(nombre)
+values("Activo"),("Cancelado"),("Desactivado"),("Finalizado"),("Eliminado");
+insert into usuarios(NombreUsuario,Contrasenia,Nombre,IdEstado)
+values ('adrian.rodriguez@tectijuana.edu.mx',md5("Abril2023"),"Profesor",1);
+
+

@@ -1,0 +1,16 @@
+.footer  {
+  background-color: #2C3333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+font-size:large ;
+text-align: center;
+}
